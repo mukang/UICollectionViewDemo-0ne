@@ -6,6 +6,12 @@
 //  Copyright (c) 2015年 穆康. All rights reserved.
 //
 
+#define MKCollectionViewWidth self.collectionView.frame.size.width
+
+#define MKCollectionViewHeight self.collectionView.frame.size.height
+
+#define MKCollectionViewSize self.collectionView.frame.size
+
 #import "MKLineLayout.h"
 
 @implementation MKLineLayout
@@ -20,12 +26,12 @@
     self.scrollDirection = UICollectionViewScrollDirectionHorizontal;
     
     // 设置cell的大小
-    CGFloat itemWH = self.collectionView.frame.size.height * 0.6;
+    CGFloat itemWH = MKCollectionViewHeight * 0.6;
     
     self.itemSize = CGSizeMake(itemWH, itemWH);
     
     // 设置内边距
-    CGFloat insetM = (self.collectionView.frame.size.width - itemWH) * 0.5;
+    CGFloat insetM = (MKCollectionViewWidth - itemWH) * 0.5;
     
     self.sectionInset = UIEdgeInsetsMake(0, insetM, 0, insetM);
 }
@@ -37,7 +43,7 @@
     NSArray *array = [super layoutAttributesForElementsInRect:rect];
     
     // 获得 collectionView 最中间的 x 值
-    CGFloat centerX = self.collectionView.contentOffset.x + self.collectionView.frame.size.width * 0.5;
+    CGFloat centerX = self.collectionView.contentOffset.x + MKCollectionViewWidth * 0.5;
     
     // 在默认布局的基础上进行微调
     for (UICollectionViewLayoutAttributes *attrs in array) {
@@ -45,7 +51,7 @@
         // 计算cell中点x值和collectionView最中间x值的差距
         CGFloat margin = ABS(centerX - attrs.center.x);
         
-        CGFloat scale = 1 - margin / (self.collectionView.frame.size.width + attrs.frame.size.width);
+        CGFloat scale = 1 - margin / (MKCollectionViewWidth + attrs.frame.size.width);
         
         attrs.transform = CGAffineTransformMakeScale(scale, scale);
     }
@@ -68,10 +74,10 @@
     
     rect.origin = proposedContentOffset;
     
-    rect.size = self.collectionView.frame.size;
+    rect.size = MKCollectionViewSize;
     
     // 计算collectionView最终中间的x
-    CGFloat centerX = proposedContentOffset.x + self.collectionView.frame.size.width * 0.5;
+    CGFloat centerX = proposedContentOffset.x + MKCollectionViewWidth * 0.5;
     
     // 取得 cell 的布局属性
     NSArray *array = [self layoutAttributesForElementsInRect:rect];

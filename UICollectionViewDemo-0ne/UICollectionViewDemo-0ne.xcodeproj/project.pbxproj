@@ -91,11 +91,11 @@
 			children = (
 				7AAB424C1ABC3AFE008296A9 /* AppDelegate.h */,
 				7AAB424D1ABC3AFE008296A9 /* AppDelegate.m */,
+				7AAB426E1ABC3EF8008296A9 /* MKLineLayout.h */,
+				7AAB426F1ABC3EF8008296A9 /* MKLineLayout.m */,
 				7AAB42711ABC7955008296A9 /* MKCollectionViewCell.h */,
 				7AAB42721ABC7955008296A9 /* MKCollectionViewCell.m */,
 				7AAB42731ABC7955008296A9 /* MKCollectionViewCell.xib */,
-				7AAB426E1ABC3EF8008296A9 /* MKLineLayout.h */,
-				7AAB426F1ABC3EF8008296A9 /* MKLineLayout.m */,
 				7AAB424F1ABC3AFE008296A9 /* ViewController.h */,
 				7AAB42501ABC3AFE008296A9 /* ViewController.m */,
 				7AAB42521ABC3AFE008296A9 /* Main.storyboard */,
@@ -433,6 +433,7 @@
 				7AAB426A1ABC3AFE008296A9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7AAB426B1ABC3AFE008296A9 /* Build configuration list for PBXNativeTarget "UICollectionViewDemo-0neTests" */ = {
 			isa = XCConfigurationList;
@@ -441,6 +442,7 @@
 				7AAB426D1ABC3AFE008296A9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
