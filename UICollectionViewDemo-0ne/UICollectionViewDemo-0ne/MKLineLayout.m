@@ -23,7 +23,11 @@
     CGFloat itemWH = self.collectionView.frame.size.height * 0.6;
     
     self.itemSize = CGSizeMake(itemWH, itemWH);
- 
+    
+    // 设置内边距
+    CGFloat insetM = (self.collectionView.frame.size.width - itemWH) * 0.5;
+    
+    self.sectionInset = UIEdgeInsetsMake(0, insetM, 0, insetM);
 }
 
 ///  返回collectionView上面所有元素（比如cell）的布局属性:这个方法决定了cell怎么排布

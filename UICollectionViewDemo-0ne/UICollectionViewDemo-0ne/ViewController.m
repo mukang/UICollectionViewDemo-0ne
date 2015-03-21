@@ -32,7 +32,7 @@ static NSString *const ID = @"image";
         
         _images = [[NSMutableArray alloc] init];
         
-        for (int i=0; i<20; i++) {
+        for (int i = 1; i <= 20; i++) {
             
             [_images addObject:[NSString stringWithFormat:@"%d", i]];
         }
